@@ -4,7 +4,7 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 
   color: var(--color-text-in-primary);
   background: var(--color-primary);
@@ -15,7 +15,7 @@
   margin-bottom: 3.2rem;
 }
 
-.logo-container img{
+.logo-container img {
   height: 10rem;
 }
 
@@ -45,7 +45,7 @@
   align-items: center;
   justify-content: center;
 
-  font: 700 2.0rem Archivo;
+  font: 700 2rem Archivo;
   text-decoration: none;
   color: var(--color-button-text);
   transition: background-color 0.2s;
@@ -60,7 +60,7 @@
   margin-right: 2.4rem;
 }
 
-.buttons-container a+a img {
+.buttons-container a + a img {
   /* width: 4rem; */
   margin-left: 10px;
 }
@@ -93,13 +93,13 @@
   margin-left: 0.8rem;
 }
 
-@media (min-width: 500px){
-  .buttons-container a+a img {
+@media (min-width: 500px) {
+  .buttons-container a + a img {
     margin-left: 0;
   }
 }
 
-@media (min-width: 550px) and (max-width: 1099px){
+@media (min-width: 550px) and (max-width: 1099px) {
   .hero-image {
     height: 30rem;
   }
@@ -112,9 +112,9 @@
     display: grid;
     grid-template-rows: 350px 1fr;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-areas: 
-      "logo hero hero"
-      "buttons buttons total";
+    grid-template-areas:
+      'logo hero hero'
+      'buttons buttons total';
   }
 
   .logo-container {
