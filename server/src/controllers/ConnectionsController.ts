@@ -1,4 +1,4 @@
-import {Request, Response} from 'express';
+import { Request, Response } from 'express';
 import db from '../database/connection';
 
 export default class ConnectionsController {
@@ -15,9 +15,8 @@ export default class ConnectionsController {
 
     await db('connections').insert({
       user_id,
-    })
+    });
 
     return res.status(201).send();
   }
-
 }
