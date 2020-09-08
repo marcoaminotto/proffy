@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
@@ -54,19 +54,22 @@ function TeacherForm() {
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
 
-    api.post('classes', { 
-      name,
-      avatar,
-      whatsapp,
-      bio,
-      subject,
-      cost: Number(cost),
-      schedule: scheduleItems
-    }).then(() => {
-      history.push('/');
-    }).catch(() => {
-      alert('Error');
-    });
+    api
+      .post('classes', {
+        name,
+        avatar,
+        whatsapp,
+        bio,
+        subject,
+        cost: Number(cost),
+        schedule: scheduleItems,
+      })
+      .then(() => {
+        history.push('/');
+      })
+      .catch(() => {
+        alert('Error');
+      });
   }
 
   return (

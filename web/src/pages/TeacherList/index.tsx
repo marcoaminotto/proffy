@@ -78,7 +78,7 @@ function TeacherList() {
       </PageHeader>
       <main>
         {teachers.map((teacher: Teacher) => {
-          return <TeacherItem key={teacher.id} teacher={teacher}/>;
+          return <TeacherItem key={teacher.id} teacher={teacher} />;
         })}
       </main>
     </div>

@@ -14,10 +14,10 @@ function Landing() {
   const [totalConnections, setTotalConnections] = useState(0);
 
   useEffect(() => {
-    api.get('connections').then(res => {
-        const { total } = res.data;
+    api.get('connections').then((res) => {
+      const { total } = res.data;
 
-        setTotalConnections(total);
+      setTotalConnections(total);
     });
   }, []);
 
