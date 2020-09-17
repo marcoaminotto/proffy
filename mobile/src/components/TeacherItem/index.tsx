@@ -29,8 +29,9 @@ function TeacherItem() {
           <Text style={styles.priceValue}>$ 20,00</Text>
         </Text>
         <View style={styles.buttonsContainer}>
-          <RectButton style={styles.favouriteButton}>
-            <Image source={heartOutlineIcon} />
+          <RectButton style={[styles.favouriteButton, styles.favourite]}>
+            {/* <Image source={heartOutlineIcon} /> */}
+            <Image source={unfavouriteIcon} />
           </RectButton>
           <RectButton style={styles.contactButton}>
             <Image source={whatsappIcon} />
