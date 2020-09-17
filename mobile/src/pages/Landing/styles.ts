@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     color: '#d4c2ff',
     fontSize: 12,
     lineHeight: 20,
-    maxWidth: 140,
+    maxWidth: 150,
     marginTop: 40,
   },
 });
