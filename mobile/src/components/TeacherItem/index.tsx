@@ -6,27 +6,41 @@ import heartOutlineIcon from '../../assets/images/icons/heart-outline.png';
 import unfavouriteIcon from '../../assets/images/icons/unfavorite.png';
 import whatsappIcon from '../../assets/images/icons/whatsapp.png';
 
+export interface Teacher {
+  id: number;
+  name: string;
+  avatar: string;
+  whatsapp: string;
+  bio: string;
+  subject: string;
+  cost: number;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
 import styles from './styles';
 
-function TeacherItem() {
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
   return (
     <View style={styles.container}>
       <View style={styles.profile}>
         <Image
           style={styles.avatar}
-          source={{ uri: 'https://github.com/marcoaminotto.png' }}
+          source={{ uri: teacher.avatar }}
         />
         <View style={styles.profileInfo}>
-          <Text style={styles.name}>Marco Echevestre</Text>
-          <Text style={styles.subject}>Math</Text>
+          <Text style={styles.name}>{teacher.name}</Text>
+          <Text style={styles.subject}>{teacher.subject}</Text>
         </View>
       </View>
       <Text style={styles.bio}>
-        Web Developer 🇧🇷 - 🇵🇱
+       {teacher.bio}
       </Text>
       <View style={styles.footer}>
         <Text style={styles.price}>Price per hour {'   '}
-          <Text style={styles.priceValue}>$ 20,00</Text>
+          <Text style={styles.priceValue}>$ {teacher.cost}</Text>
         </Text>
         <View style={styles.buttonsContainer}>
           <RectButton style={[styles.favouriteButton, styles.favourite]}>
