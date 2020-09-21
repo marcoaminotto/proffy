@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, Linking } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 
 import heartOutlineIcon from '../../assets/images/icons/heart-outline.png';
@@ -23,23 +23,23 @@ interface TeacherItemProps {
 import styles from './styles';
 
 const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+  function handleLinkToWhatsapp() {
+    Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.profile}>
-        <Image
-          style={styles.avatar}
-          source={{ uri: teacher.avatar }}
-        />
+        <Image style={styles.avatar} source={{ uri: teacher.avatar }} />
         <View style={styles.profileInfo}>
           <Text style={styles.name}>{teacher.name}</Text>
           <Text style={styles.subject}>{teacher.subject}</Text>
         </View>
       </View>
-      <Text style={styles.bio}>
-       {teacher.bio}
-      </Text>
+      <Text style={styles.bio}>{teacher.bio}</Text>
       <View style={styles.footer}>
-        <Text style={styles.price}>Price per hour {'   '}
+        <Text style={styles.price}>
+          Price per hour {'   '}
           <Text style={styles.priceValue}>$ {teacher.cost}</Text>
         </Text>
         <View style={styles.buttonsContainer}>
@@ -47,7 +47,10 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
             {/* <Image source={heartOutlineIcon} /> */}
             <Image source={unfavouriteIcon} />
           </RectButton>
-          <RectButton style={styles.contactButton}>
+          <RectButton
+            onPress={handleLinkToWhatsapp}
+            style={styles.contactButton}
+          >
             <Image source={whatsappIcon} />
             <Text style={styles.contactButtonText}>Contact</Text>
           </RectButton>
@@ -55,6 +58,6 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
       </View>
     </View>
   );
-}
+};
 
 export default TeacherItem;
