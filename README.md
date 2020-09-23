@@ -35,7 +35,7 @@
    <img src="./.github/register-mobile.jpg" width="230px">
 </div>
 
-# :rocket: Tecnologies
+# :rocket: Technologies
 This project was made using the following technologies:
 
 * [Typescript](https://www.typescriptlang.org/)
