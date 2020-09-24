@@ -99,9 +99,12 @@ Read the QRCode with the app of [expo](https://play.google.com/store/apps/detail
 
 Released in 2020 :closed_book: License
 
-Made with ♥️ by [Marco Echevestre](https://github.com/marcoaminotto/).
 This project is under the [MIT license](./LICENSE).
 
 
 Give a ⭐️ if this project helped you!
 
+#
+<p align="center">
+   <b> &#60;/&#62; by <a href="https://www.linkedin.com/in/marco-echevestre/">Marco Echevestre</a></b>
+</p>
